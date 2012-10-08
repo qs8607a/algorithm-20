@@ -1,4 +1,4 @@
-target=size maxDepth minValue printTree printPostorder
+target=size maxDepth minValue printTree printPostorder hasPathSum printPaths mirror doubleTree sameTree countTrees isBST isBST2
 all:${target}
 
 libs=create_bst.o
@@ -24,6 +24,36 @@ printTree:printTree.o ${libs}
 printPostorder:printPostorder.o ${libs}	
 	g++ -o $@ $^ ${LDFLAGS}
 
+hasPathSum:hasPathSum.o ${libs}	
+	g++ -o $@ $^ ${LDFLAGS}
+
+
+printPaths:printPaths.o ${libs}	
+	g++ -o $@ $^ ${LDFLAGS}
+
+mirror:mirror.o ${libs}	
+	g++ -o $@ $^ ${LDFLAGS}
+
+doubleTree:doubleTree.o ${libs}	
+	g++ -o $@ $^ ${LDFLAGS}
+
+sameTree:sameTree.o ${libs}	
+	g++ -o $@ $^ ${LDFLAGS}
+
+countTrees:countTrees.o ${libs}	
+	g++ -o $@ $^ ${LDFLAGS}
+
+isBST:isBST.o ${libs}	
+	g++ -o $@ $^ ${LDFLAGS}
+
+isBST2:isBST2.o ${libs}	
+	g++ -o $@ $^ ${LDFLAGS}
+
+.PHONY:clean
+
+clean:
+	rm *.o -rf
+	rm ${target} -rf
 
 .PHONY:clean
 
