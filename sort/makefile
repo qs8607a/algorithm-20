@@ -1,4 +1,4 @@
-target=selection insertion
+target=selection insertion bubble
 
 all:${target}
 
@@ -11,6 +11,10 @@ selection:selection.o
 
 insertion:insertion.o
 	g++ -o $@ $^ ${LDFLAGS}
+
+bubble:bubble.o
+	g++ -o $@ $^ ${LDFLAGS}
+
 .cpp.o:
 	g++ -c $^ -o $@ ${CXXFLAGS}
 
