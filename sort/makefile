@@ -1,4 +1,4 @@
-target=selection
+target=selection insertion
 
 all:${target}
 
@@ -9,6 +9,8 @@ LDFLAGS=
 selection:selection.o
 	g++ -o $@ $^ ${LDFLAGS}
 
+insertion:insertion.o
+	g++ -o $@ $^ ${LDFLAGS}
 .cpp.o:
 	g++ -c $^ -o $@ ${CXXFLAGS}
 
