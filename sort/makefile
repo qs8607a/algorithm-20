@@ -1,4 +1,4 @@
-target=selection insertion bubble merge
+target=selection insertion bubble merge quick
 
 all:${target}
 
@@ -16,6 +16,9 @@ bubble:bubble.o
 	g++ -o $@ $^ ${LDFLAGS}
 
 merge:merge.o
+	g++ -o $@ $^ ${LDFLAGS}
+
+quick:quick.o
 	g++ -o $@ $^ ${LDFLAGS}
 
 .cpp.o:
